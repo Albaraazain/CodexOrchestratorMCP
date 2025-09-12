@@ -1,0 +1,6 @@
+{
+  "codex-orchestrator": {
+    "command": "python3",
+    "args": ["real_mcp_server.py"]
+  }
+}

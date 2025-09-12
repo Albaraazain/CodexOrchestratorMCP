@@ -1,0 +1,38 @@
+{
+  "created_at": "2025-09-12T14:00:42.366528",
+  "total_tasks": 1,
+  "active_tasks": 1,
+  "total_agents_spawned": 3,
+  "active_agents": 3,
+  "max_concurrent_agents": 8,
+  "tasks": {
+    "TASK-20250912-140042-a96c3b11": {
+      "description": "Analyze MCP tool creation best practices and verify our CodexOrchestrator approach",
+      "created_at": "2025-09-12T14:00:42.367163",
+      "status": "INITIALIZED"
+    }
+  },
+  "agents": {
+    "mcp-researcher-140049-872580": {
+      "task_id": "TASK-20250912-140042-a96c3b11",
+      "type": "mcp-researcher",
+      "parent": "orchestrator",
+      "started_at": "2025-09-12T14:00:51.883415",
+      "tmux_session": "agent_mcp-researcher-140049-872580"
+    },
+    "codebase-analyzer-140058-c245f3": {
+      "task_id": "TASK-20250912-140042-a96c3b11",
+      "type": "codebase-analyzer",
+      "parent": "orchestrator",
+      "started_at": "2025-09-12T14:01:00.908427",
+      "tmux_session": "agent_codebase-analyzer-140058-c245f3"
+    },
+    "comparison-analyst-140138-636f30": {
+      "task_id": "TASK-20250912-140042-a96c3b11",
+      "type": "comparison-analyst",
+      "parent": "orchestrator",
+      "started_at": "2025-09-12T14:01:40.470819",
+      "tmux_session": "agent_comparison-analyst-140138-636f30"
+    }
+  }
+}
