@@ -52,7 +52,7 @@ Deploys a headless codex agent to work on a specific task.
   "task_id": "TASK-20250908-123456",
   "status": "deployed",
   "workspace": ".agent-workspace/TASK-20250908-123456",
-  "deployment_command": "codex --dangerously-skip-permissions --run-in-background [PROMPT]"
+  "deployment_command": "codex exec --full-auto -C [WORKDIR] [PROMPT]"
 }
 ```
 

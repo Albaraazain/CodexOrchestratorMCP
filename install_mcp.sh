@@ -44,7 +44,7 @@ fi
 # Test import
 echo ""
 echo "🧪 Testing MCP server..."
-python3 -c "from mcp_server import mcp; print('✅ MCP server imports successfully')"
+python3 -c "from real_mcp_server import mcp; print('✅ MCP server imports successfully')"
 
 if [ $? -ne 0 ]; then
     echo "❌ MCP server import failed"
@@ -65,7 +65,7 @@ echo "      - Linux: ~/.config/codex/config.json"
 echo ""
 echo "🚀 To run the MCP server manually:"
 echo "   source venv/bin/activate"
-echo "   python -m mcp_server"
+echo "   python real_mcp_server.py"
 echo ""
 echo "📖 Available MCP Tools:"
 echo "   • create_task - Create new orchestration task"

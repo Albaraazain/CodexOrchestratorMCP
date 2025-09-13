@@ -154,32 +154,27 @@ DEPLOYMENT_RESULT=$(echo '{
 import json, sys, subprocess, os
 data = json.load(sys.stdin)
 
-# Deploy using the MCP orchestrator tools
 try:
-    # This uses the real MCP tools to deploy headless codex
     result = subprocess.run([
         'python3', '-c', '''
-import sys
-sys.path.append(\"${WORKSPACE}/..\")
-from mcp_server import get_orchestrator
+from real_mcp_server import deploy_headless_agent
 
-orch = get_orchestrator()
-agent_id = orch.deploy_headless_agent(
-    \"${TASK_ID}\",
-    \"${AGENT_TYPE}\", 
-    \"\"\"${FULL_PROMPT}\"\"\",
-    \"${PARENT_AGENT}\"
+result = deploy_headless_agent(
+    task_id=\"${TASK_ID}\",
+    agent_type=\"${AGENT_TYPE}\", 
+    prompt=\"\"\"${FULL_PROMPT}\"\"\",
+    parent=\"${PARENT_AGENT}\"
 )
-print(agent_id if agent_id else \"FAILED\")
+print(result.get('agent_id') if result.get('success') else \"FAILED\")
 '''
     ], capture_output=True, text=True, timeout=30)
-    
+
     if result.returncode == 0 and result.stdout.strip() != 'FAILED':
         print(f'SUCCESS:{result.stdout.strip()}')
     else:
         print(f'FALLBACK:bash_real_{data[\"agent_type\"]}_{os.urandom(3).hex()}')
         
-except Exception as e:
+except Exception:
     print(f'FALLBACK:bash_real_{data[\"agent_type\"]}_{os.urandom(3).hex()}')
 ")
 

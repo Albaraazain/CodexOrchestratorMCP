@@ -1,0 +1,10 @@
+# Node/TypeScript build artifacts
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+
+# MCP workspaces
+.agent-workspace/
+

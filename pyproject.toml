@@ -1,17 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "codex-code-orchestrator"
+name = "claude-orchestrator-mcp"
 version = "1.0.0"
-description = "A powerful MCP server for orchestrating headless codex agents with anti-spiral protection"
+description = "MCP server for orchestrating headless Claude agents with anti-spiral protection"
 readme = "README.md"
 license = {text = "MIT"}
-requires-python = ">=3.8"
 authors = [
-    {name = "codex Code Orchestrator Project"}
+    {name = "Your Name", email = "your.email@example.com"}
 ]
-keywords = ["codex", "mcp", "orchestrator", "agents", "automation"]
+keywords = ["claude", "mcp", "orchestrator", "agents", "ai", "automation"]
 classifiers = [
     "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
+    "Intended Audience :: Developers", 
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
@@ -19,9 +22,8 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-    "Topic :: System :: Distributed Computing"
 ]
+requires-python = ">=3.8"
 dependencies = [
     "fastmcp>=2.0.0"
 ]
@@ -29,23 +31,18 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0.0",
-    "pytest-asyncio>=0.21.0"
+    "pytest-asyncio>=0.21.0",
+    "black",
+    "flake8"
 ]
 
 [project.urls]
-Homepage = "https://github.com/your-org/codex-code-orchestrator"
-Documentation = "https://github.com/your-org/codex-code-orchestrator#readme"
-Repository = "https://github.com/your-org/codex-code-orchestrator.git"
-"Bug Tracker" = "https://github.com/your-org/codex-code-orchestrator/issues"
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+Homepage = "https://github.com/your-org/claude-orchestrator-mcp"
+Repository = "https://github.com/your-org/claude-orchestrator-mcp"
 
 [project.scripts]
-codex-code-orchestrator = "real_mcp_server:mcp.run"
+claude-orchestrator = "real_mcp_server:main"
 
-[tool.mcp]
-name = "codex-orchestrator"
-description = "Orchestrate headless codex agents with anti-spiral protection"
-icon = "🤖"
+[tool.black]
+line-length = 88
+target-version = ['py38']

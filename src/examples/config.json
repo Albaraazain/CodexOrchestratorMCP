@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "codex-orchestrator-mcp": {
+      "command": "node",
+      "args": ["./dist/cjs/cli.js"],
+      "env": {
+        "codex_ORCHESTRATOR_WORKSPACE": "${workspaceFolder}/.agent-workspace",
+        "codex_ORCHESTRATOR_MAX_CONCURRENT": "8",
+        "codex_ORCHESTRATOR_MAX_AGENTS": "25",
+        "codex_ORCHESTRATOR_MAX_DEPTH": "5"
+      }
+    }
+  }
+}
+

@@ -1,0 +1,13 @@
+src/
+scripts/
+.agent-workspace/
+venv/
+.venv*/
+__pycache__/
+*.py
+*.sh
+docs/
+examples/
+CHANGELOG.md
+CONTRIBUTING.md
+

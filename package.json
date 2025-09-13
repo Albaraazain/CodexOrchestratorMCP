@@ -1,0 +1,50 @@
+{
+  "name": "codex-orchestrator-mcp",
+  "version": "1.0.0",
+  "description": "TypeScript MCP server for orchestrating headless codex agents with anti-spiral protection",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "codex-orchestrator-mcp": "./dist/esm/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/esm/index.d.ts"
+    },
+    "./cli": {
+      "import": "./dist/esm/cli.js",
+      "require": "./dist/cjs/cli.js"
+    }
+  },
+  "files": [
+    "dist",
+    "build"
+  ],
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:single": "ncc build src/cli.ts -o build -m",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/esm/cli.js",
+    "prepublishOnly": "npm run build && npm run build:single",
+    "start:single": "node build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "zod": "^3.23.8",
+    "zod-to-json-schema": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.2",
+    "@vercel/ncc": "^0.38.3"
+  }
+}
+
