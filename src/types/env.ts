@@ -9,6 +9,7 @@ export interface OrchestratorEnv {
   codex_EXECUTABLE?: string;
   codex_FLAGS?: string;
   codex_CALLER_CWD?: string;
+  codex_ORCHESTRATOR_AGENT_KEEPALIVE_SECS?: string;
 }
 
 export function getEnv(): OrchestratorEnv {

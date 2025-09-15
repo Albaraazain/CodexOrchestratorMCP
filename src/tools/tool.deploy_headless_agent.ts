@@ -85,7 +85,10 @@ export function deployHeadlessAgentTool(logger: Logger): RegisteredTool<DeployHe
       const env = getEnv();
       const codexExecutable = env.codex_EXECUTABLE || 'codex';
       const codexFlags = env.codex_FLAGS || '--full-auto';
-      const codexCommand = `${codexExecutable} exec -C "${callingProjectDir}" ${codexFlags} "$(cat \"${promptFile}\")"`;
+      const keepAliveSecs = Number(env.codex_ORCHESTRATOR_AGENT_KEEPALIVE_SECS ?? '120');
+      // Wrap in a login shell so PATH and subshell $(cat ...) expand correctly, and keep the session alive briefly for inspection
+      const inner = `${codexExecutable} exec -C "${callingProjectDir}" ${codexFlags} "$(cat '${promptFile}')"; sleep ${keepAliveSecs}`;
+      const codexCommand = `bash -lc ${JSON.stringify(inner)}`;
 
       const tmux = await createTmuxSession(sessionName, codexCommand, callingProjectDir);
       if (!tmux.success) {

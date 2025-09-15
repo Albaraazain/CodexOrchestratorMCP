@@ -1,7 +1,7 @@
 {
   "created_at": "2025-09-13T12:24:02.282Z",
-  "total_tasks": 8,
-  "active_tasks": 8,
+  "total_tasks": 14,
+  "active_tasks": 14,
   "total_agents_spawned": 0,
   "active_agents": 0,
   "max_concurrent_agents": 8,
@@ -77,6 +77,60 @@
       "workspace_base": "/Users/albaraa/semih_bey_app/.agent-workspace",
       "caller_cwd": "/Users/albaraa/semih_bey_app",
       "guidance": "TASK GUIDANCE\n\nWorkspace: /Users/albaraa/semih_bey_app/.agent-workspace/TASK-202509131349216-d41a66b4\nCaller CWD: /Users/albaraa/semih_bey_app\n\nWhen creating orchestrator tasks from this project, pass:\n- workspace_base=\"/Users/albaraa/semih_bey_app/.agent-workspace\"\n- caller_cwd=\"/Users/albaraa/semih_bey_app\"\n\nAgents should:\n- Use regular providers in use cases (no realtime)\n- Keep filters stable (never create maps in build)\n- Use generated providers directly; compose, don’t wrap\n- Treat MFC and Velocity Profile as separate methods\n\nSupabase MCP: project_id=xvhvkekbwesdaotcuwyh\nClaude headless model: claude-sonnet-4-20250514\n"
+    },
+    "TASK-202509131418201-eeff42fb": {
+      "description": "Finish both test methods (MFC + Velocity Profile): DB trigger fix, regenerate models, remove legacy config references in Test Setup, run analyzers, and sanity verify. Repo: /Users/albaraa/semih_bey_app",
+      "created_at": "2025-09-13T14:18:20.183Z",
+      "status": "INITIALIZED",
+      "workspace": "/Users/albaraa/semih_bey_app/.agent-workspace/TASK-202509131418201-eeff42fb",
+      "workspace_base": "/Users/albaraa/semih_bey_app/.agent-workspace",
+      "caller_cwd": "/Users/albaraa/semih_bey_app",
+      "guidance": "TASK GUIDANCE\n\nWorkspace: /Users/albaraa/semih_bey_app/.agent-workspace/TASK-202509131418201-eeff42fb\nCaller CWD: /Users/albaraa/semih_bey_app\n\nWhen creating orchestrator tasks from this project, pass:\n- workspace_base=\"/Users/albaraa/semih_bey_app/.agent-workspace\"\n- caller_cwd=\"/Users/albaraa/semih_bey_app\"\n\nAgents should:\n- Use regular providers in use cases (no realtime)\n- Keep filters stable (never create maps in build)\n- Use generated providers directly; compose, don’t wrap\n- Treat MFC and Velocity Profile as separate methods\n\nSupabase MCP: project_id=xvhvkekbwesdaotcuwyh\nClaude headless model: claude-sonnet-4-20250514\n"
+    },
+    "TASK-202509131419190-ed95e486": {
+      "description": "Code cleanup for Test Setup flow to avoid legacy configurations; scan and patch code.",
+      "created_at": "2025-09-13T14:19:19.078Z",
+      "status": "INITIALIZED",
+      "workspace": "/Users/albaraa/semih_bey_app/.agent-workspace/TASK-202509131419190-ed95e486",
+      "workspace_base": "/Users/albaraa/semih_bey_app/.agent-workspace",
+      "caller_cwd": "/Users/albaraa/semih_bey_app",
+      "guidance": "TASK GUIDANCE\n\nWorkspace: /Users/albaraa/semih_bey_app/.agent-workspace/TASK-202509131419190-ed95e486\nCaller CWD: /Users/albaraa/semih_bey_app\n\nWhen creating orchestrator tasks from this project, pass:\n- workspace_base=\"/Users/albaraa/semih_bey_app/.agent-workspace\"\n- caller_cwd=\"/Users/albaraa/semih_bey_app\"\n\nAgents should:\n- Use regular providers in use cases (no realtime)\n- Keep filters stable (never create maps in build)\n- Use generated providers directly; compose, don’t wrap\n- Treat MFC and Velocity Profile as separate methods\n\nSupabase MCP: project_id=xvhvkekbwesdaotcuwyh\nClaude headless model: claude-sonnet-4-20250514\n"
+    },
+    "TASK-202509131422410-eec9656d": {
+      "description": "Validate Test Setup flow configuration loading is method-specific: VP uses only velocity_profile_configurations, MFC loads none; run static checks and analyze build.",
+      "created_at": "2025-09-13T14:22:41.084Z",
+      "status": "INITIALIZED",
+      "workspace": "/Users/albaraa/semih_bey_app/.agent-workspace/TASK-202509131422410-eec9656d",
+      "workspace_base": "/Users/albaraa/semih_bey_app/.agent-workspace",
+      "caller_cwd": "/Users/albaraa/semih_bey_app",
+      "guidance": "TASK GUIDANCE\n\nWorkspace: /Users/albaraa/semih_bey_app/.agent-workspace/TASK-202509131422410-eec9656d\nCaller CWD: /Users/albaraa/semih_bey_app\n\nWhen creating orchestrator tasks from this project, pass:\n- workspace_base=\"/Users/albaraa/semih_bey_app/.agent-workspace\"\n- caller_cwd=\"/Users/albaraa/semih_bey_app\"\n\nAgents should:\n- Use regular providers in use cases (no realtime)\n- Keep filters stable (never create maps in build)\n- Use generated providers directly; compose, don’t wrap\n- Treat MFC and Velocity Profile as separate methods\n\nSupabase MCP: project_id=xvhvkekbwesdaotcuwyh\nClaude headless model: claude-sonnet-4-20250514\n"
+    },
+    "TASK-202509131423382-1870aa62": {
+      "description": "Run static checks for providers in lib/screens/test_setup and run flutter analyze",
+      "created_at": "2025-09-13T14:23:38.251Z",
+      "status": "INITIALIZED",
+      "workspace": "/Users/albaraa/semih_bey_app/.agent-workspace/TASK-202509131423382-1870aa62",
+      "workspace_base": "/Users/albaraa/semih_bey_app/.agent-workspace",
+      "caller_cwd": "/Users/albaraa/semih_bey_app",
+      "guidance": "TASK GUIDANCE\n\nWorkspace: /Users/albaraa/semih_bey_app/.agent-workspace/TASK-202509131423382-1870aa62\nCaller CWD: /Users/albaraa/semih_bey_app\n\nWhen creating orchestrator tasks from this project, pass:\n- workspace_base=\"/Users/albaraa/semih_bey_app/.agent-workspace\"\n- caller_cwd=\"/Users/albaraa/semih_bey_app\"\n\nAgents should:\n- Use regular providers in use cases (no realtime)\n- Keep filters stable (never create maps in build)\n- Use generated providers directly; compose, don’t wrap\n- Treat MFC and Velocity Profile as separate methods\n\nSupabase MCP: project_id=xvhvkekbwesdaotcuwyh\nClaude headless model: claude-sonnet-4-20250514\n"
+    },
+    "TASK-202509131424370-ecf3b2f7": {
+      "description": "Frontend validation: grep for providers in lib/screens/test_setup and run flutter analyze. Report findings clearly with paths and analyzer issues.",
+      "created_at": "2025-09-13T14:24:37.034Z",
+      "status": "INITIALIZED",
+      "workspace": "/Users/albaraa/semih_bey_app/.agent-workspace/TASK-202509131424370-ecf3b2f7",
+      "workspace_base": "/Users/albaraa/semih_bey_app/.agent-workspace",
+      "caller_cwd": "/Users/albaraa/semih_bey_app",
+      "guidance": "TASK GUIDANCE\n\nWorkspace: /Users/albaraa/semih_bey_app/.agent-workspace/TASK-202509131424370-ecf3b2f7\nCaller CWD: /Users/albaraa/semih_bey_app\n\nWhen creating orchestrator tasks from this project, pass:\n- workspace_base=\"/Users/albaraa/semih_bey_app/.agent-workspace\"\n- caller_cwd=\"/Users/albaraa/semih_bey_app\"\n\nAgents should:\n- Use regular providers in use cases (no realtime)\n- Keep filters stable (never create maps in build)\n- Use generated providers directly; compose, don’t wrap\n- Treat MFC and Velocity Profile as separate methods\n\nSupabase MCP: project_id=xvhvkekbwesdaotcuwyh\nClaude headless model: claude-sonnet-4-20250514\n"
+    },
+    "TASK-202509132313348-b069a037": {
+      "description": "WRAPPER_REMOVED_TEST",
+      "created_at": "2025-09-13T23:13:34.804Z",
+      "status": "INITIALIZED",
+      "workspace": "/Users/albaraa/Developer/Projects/ClaudeOrchestratorMCP/.agent-workspace/TASK-202509132313348-b069a037",
+      "workspace_base": "/Users/albaraa/Developer/Projects/ClaudeOrchestratorMCP/.agent-workspace",
+      "caller_cwd": "/Users/albaraa/Developer/Projects/ClaudeOrchestratorMCP",
+      "guidance": "TASK GUIDANCE\n\nWorkspace: /Users/albaraa/Developer/Projects/ClaudeOrchestratorMCP/.agent-workspace/TASK-202509132313348-b069a037\nCaller CWD: /Users/albaraa/Developer/Projects/ClaudeOrchestratorMCP\n\nWhen creating orchestrator tasks from this project, pass:\n- workspace_base=\"/Users/albaraa/Developer/Projects/ClaudeOrchestratorMCP/.agent-workspace\"\n- caller_cwd=\"/Users/albaraa/Developer/Projects/ClaudeOrchestratorMCP\"\n\nAgents should:\n- Use regular providers in use cases (no realtime)\n- Keep filters stable (never create maps in build)\n- Use generated providers directly; compose, don’t wrap\n- Treat MFC and Velocity Profile as separate methods\n\nSupabase MCP: project_id=xvhvkekbwesdaotcuwyh\nClaude headless model: claude-sonnet-4-20250514\n"
     }
   },
   "agents": {}
